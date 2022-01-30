@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SportStoreDContext">
+  <DataContextMoniker Name="/SportStoreDContextDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2d6aadc7-3faa-4665-9124-f67102623f8e" absoluteBounds="3.5, 2.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SportStoreDContextDataContext/Shoe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6bf3f3d7-99d2-463f-9a5f-b7449cb3a295" absoluteBounds="3.515, 3.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3b02c521-60d2-49ff-854f-46f4f95fbd3a" absoluteBounds="6.125, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/SportStoreDContextDataContext/SportEquipment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb95642e-d8ea-46da-a6ef-d97f1c3501b1" absoluteBounds="6.14, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4e5786d4-f1c4-48f7-8ec1-a41a116738c7" absoluteBounds="3.375, 0.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/SportStoreDContextDataContext/Team" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d2347123-24f3-4f2b-9f57-a9cd17cf59ed" absoluteBounds="3.39, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 1.34699625651042); (6.125 : 1.34699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SportStoreDContextDataContext/Team/Team_SportEquipment" />
+      <nodes>
+        <classShapeMoniker Id="4e5786d4-f1c4-48f7-8ec1-a41a116738c7" />
+        <classShapeMoniker Id="3b02c521-60d2-49ff-854f-46f4f95fbd3a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4342e7b9-dfbf-4ff3-83ae-653bf8dae6e8" absoluteBounds="1.25, 1.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/SportStoreDContextDataContext/Clothe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="27e8b209-1341-4850-8e13-2b0636064b9e" absoluteBounds="1.2650000000000001, 2.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,44 @@
+﻿<link rel="stylesheet" href="~/Content/PantsCSS.css" />
+
+<div class="pantsBtns">
+
+    <button class="theBtns" onclick="location.href='@Url.Action("AllPants", "Pants")'">Sport-Pants</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("PantsTable", "Pants")'">Pants Table</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("OnlyLongPants", "Pants")'">Long Pants</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("OnlyDrifitPants", "Pants")'">Dri-fit</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("PriceSortedPants", "Pants")'">Low to High Prices</button>
+
+</div>
+
+<div title="titleDiv">
+    <h1 class="Title"><span>P</span>ants <br /><span>&</span><br /><span>J</span>oggers</h1><br /><br /><br /><br />
+
+</div>
+<article class="slide">
+    <img class="slidePic" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f562cca7-5856-4546-b4f1-e6b33f491a31/jordan-23-engineered-tracksuit-bottoms-WFDX8K.png" alt="Slide 7" />
+    <img class="slidePic" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/301c5fcc-c504-4666-80c6-710ca5c7280f/jordan-23-engineered-tracksuit-bottoms-WFDX8K.png" alt="Slide 4" />
+    <img class="slidePic" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/7f982a3e-ad31-4fe3-825c-e4034147289b/paris-saint-germain-puffer-jacket-1r72d7.png" alt="Slide 4" />
+    <img class="slidePic" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9f85e40d-c061-49aa-be83-1e2aeb6f98e1/paris-saint-germain-fleece-pants-T4sgmT.png" alt="Slide 2" />
+    <img class="slidePic" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/5cd99946-75fd-4954-b181-037d803e34e4/paris-saint-germain-fleece-pants-T4sgmT.png" alt="Slide 1" />
+    <img class="slidePic" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/63a25297-d1ae-4fdd-ba88-0592a2b3f6bd/fc-barcelona-strike-dri-fit-knit-football-tracksuit-QqDjrZ.png" alt="Slide 9" />
+
+    <img class="slidePic" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/d6b64029-b53a-4e71-b66b-c08afda37048/fc-barcelona-strike-dri-fit-knit-football-tracksuit-QqDjrZ.png" alt="Slide 6" />
+
+</article>
+@{
+    <div class="cardsContainer">
+
+        @foreach (var pants in Model)
+        {
+
+            <div class="PantsCards">
+                <img class="PantsImgs" src="@pants.Pic" />
+                <h1 id="clothTypeTitle">@pants.ClothType</h1>
+                <h4 id="brandTitle">@pants.Brand</h4>
+                <p>Price: @pants.Price</p>
+            </div>
+        }
+    </div>
+
+}
+

@@ -1,0 +1,55 @@
+﻿<link rel="stylesheet" href="~/Content/EquipmentCSS.css" />
+
+
+<div class="equipBtns">
+    <button class="theBtns" onclick="location.href='@Url.Action("AllEquipments", "SportEquipment")'">Sport Equipments</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("EquipmentTable", "SportEquipment")'">Equipment-Table</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("OnlyFootball", "SportEquipment")'">Only Football</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("OnlyBasketBall", "SportEquipment")'">Only BasketBall</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("PriceSortedEquipments", "SportEquipment")'">Low-High Prices</button>
+
+</div>
+
+<div title="titleDiv">
+    <h1 class="Title"><span>T</span>able</h1>
+
+</div>
+@{
+
+    <div class="equipmentTable">
+        <br /><br />
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Team ID</th>
+                <th>What Sport</th>
+                <th>Company</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Pic</th>
+                <th>Price</th>
+
+
+
+            </tr>
+            @foreach (var shirt in Model)
+            {
+
+                <tr>
+                    <td>@shirt.Id</td>
+                    <td>@shirt.TeamId</td>
+                    <td>@shirt.WhatSport</td>
+                    <td>@shirt.Company</td>
+                    <td>@shirt.ProductName</td>
+                    <td>@shirt.Quantity</td>
+                    <td><img src="@shirt.Pic" /></td>
+                    <td>@shirt.Price</td>
+
+
+                </tr>
+            }
+
+        </table>
+
+    </div>
+}

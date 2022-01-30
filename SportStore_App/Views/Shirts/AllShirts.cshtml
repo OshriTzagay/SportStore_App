@@ -1,0 +1,45 @@
+﻿<link rel="stylesheet" href="~/Content/ShirtsCSS.css" />
+
+<div class="shirtsBtns">
+
+    <button class="theBtns" onclick="location.href='@Url.Action("AllShirts", "Shirts")'">Sport Shirts</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("ShirtsTable", "Shirts")'">Shirts Table</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("OnlyLongShirts", "Shirts")'">Long Shirts&Tops</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("OnlyDrifit", "Shirts")'">Dri-fit Shirts</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("PriceSortedShirts", "Shirts")'">Low to High Prices</button>
+
+</div>
+
+<div title="titleDiv">
+    <h1 class="Title"><span>O</span>ur <span>N</span>ew <span>R</span>eleases</h1>
+
+</div>
+<article class="slide">
+    <img class="slidePic" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/d26a9e38-a60b-45c6-9514-ddf4e7fa0635/nigeria-football-t-shirt-2n7r3M.png" alt="Slide 4" />
+    <img class="slidePic" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/4814e943-5fc0-4d87-8873-b1acb936d5d9/dri-fit-academy-short-sleeve-football-top-G16k4h.png" alt="Slide 3" />
+    <img class="slidePic" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/4e34a958-40e7-4408-9513-3b96238f6354/dri-fit-academy-short-sleeve-football-top-G16k4h.png" alt="Slide 4" />
+
+    <img class="slidePic" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e5470655-741e-4e30-8dfe-d8dcdd9b20d4/dri-fit-academy-short-sleeve-football-top-G16k4h.png" alt="Slide 2" />
+    <img class="slidePic" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/512f23e2-09fc-4d53-bafe-277cd6aafb78/dri-fit-academy-short-sleeve-football-top-G16k4h.png" alt="Slide 1" />
+    <img class="slidePic" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cfce5714-9f6a-4307-8296-b96ef5f1a403/dri-fit-academy-short-sleeve-football-top-G16k4h.png" alt="Slide 5" />
+    <img class="slidePic" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/6366824d-7737-425c-9796-e7ea90edf6e8/dri-fit-blood-sweat-basketball-basketball-t-shirt-rDVBXm.png" alt="Slide 6" />
+
+</article>
+@{
+    <div class="cardsContainer">
+
+        @foreach (var shirt in Model)
+        {
+
+            <div class="ShirtsCards">
+                <img class="ShirtsImgs" src="@shirt.Pic" />
+                <h1 id="clothTypeTitle">@shirt.ClothType</h1>
+                <h4 id="brandTitle">@shirt.Brand</h4>
+                <p>Price: <b>@shirt.Price</b></p>
+               
+
+            </div>
+        }
+    </div>
+
+}

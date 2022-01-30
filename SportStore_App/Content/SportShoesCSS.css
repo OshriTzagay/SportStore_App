@@ -1,0 +1,135 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Poiret+One&display=swap');
+
+
+body {
+}
+
+
+/*/////////////////////////////TheTable/////////////////////////////*/
+.shoesTable tr, td {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+    table th {
+        text-align: center;
+    }
+
+.shoesTable img {
+    width: 150px;
+    height: 150px;
+}
+/*/////////////////////////////The Shoe Cards/////////////////////////////*/
+.shoeBtns {
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 18vh;
+    width: 65%;
+    margin-left: 17%;
+}
+
+.theBtns {
+    font-size: 17px;
+    background-color: transparent;
+    color: silver;
+    height: 60px;
+    width: 115px;
+    color: black;
+    border-radius: 5px;
+    transition: 0.4s linear;
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+}
+
+
+
+    .theBtns:hover {
+        background-color: black;
+        color: silver;
+        margin-left: 5px;
+    }
+
+.cardsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 150px;
+}
+
+.shoesCards {
+    width: 320px;
+    height: 435px;
+    text-align: center;
+    margin-bottom: 200px;
+    box-shadow: gray 8px 8px 8px 8px;
+    font-family: 'Orbitron', sans-serif;
+    transition: 0.5s;
+}
+
+    .shoesCards:hover {
+        width: 370px;
+        height: 450px;
+    }
+
+
+    .shoesCards img {
+        transition: 2s;
+        width: 225px;
+        height: 250px;
+        cursor: pointer;
+    }
+
+    .shoesCards:hover {
+        box-shadow: silver 15px 15px 15px 15px;
+    }
+
+.titleDiv {
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    padding: 15px;
+}
+
+.Title {
+    height: 15vh;
+    color: darkgray;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Monoton', cursive;
+    letter-spacing: 10px;
+    /*    border-left: double darkgray 1px;
+    border-right: double darkgray 1px;*/
+    transition: 2s;
+}
+
+
+.bg-div {
+    width: 68vw;
+    height: 66vh;
+    display: flex;
+    text-align: center;
+    overflow: hidden;
+    margin-right: 400%;
+    margin-left: 5%;
+    box-shadow: silver 2px 2px 2px 2px;
+}
+
+.the-bg {
+    width: 100%;
+    height: auto;
+    box-shadow: silver 6px 6px 6px 6px;
+}
+
+
+span {
+    color: black;
+}

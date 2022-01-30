@@ -1,0 +1,32 @@
+﻿
+<link rel="stylesheet" href="~/Content/EquipmentCSS.css" />
+
+<div class="equipBtns">
+    <button class="theBtns" onclick="location.href='@Url.Action("AllEquipments", "SportEquipment")'">Sport Equipments</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("EquipmentTable", "SportEquipment")'">Equipment-Table</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("OnlyFootball", "SportEquipment")'">Only Football</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("OnlyBasketBall", "SportEquipment")'">Only BasketBall</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("PriceSortedEquipments", "SportEquipment")'">Low-High Prices</button>
+</div>
+
+<div title="titleDiv">
+    <h1 class="Title"><span>F</span>ootball <span>E</span>quipment</h1>
+
+</div>
+@{
+    <div class="cardsContainer">
+
+        @foreach (var equip in Model)
+        {
+
+            <div class="EquipCards">
+                <img class="EquipImgs" src="@equip.Pic" />
+                <h2>@equip.Company</h2>
+                <h2>@equip.WhatSport</h2>
+                <p>Price:@equip.Price</p>
+
+            </div>
+        }
+    </div>
+
+}

@@ -1,0 +1,52 @@
+﻿<link rel="stylesheet" href="~/Content/PantsCSS.css" />
+
+<div class="pantsBtns">
+
+    <button class="theBtns" onclick="location.href='@Url.Action("AllPants", "Pants")'">Sport-Pants</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("PantsTable", "Pants")'">Pants Table</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("OnlyLongPants", "Pants")'">Long Pants</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("OnlyDrifitPants", "Pants")'">Dri-fit</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("PriceSortedPants", "Pants")'">Low to High Prices</button>
+
+</div>
+
+<div title="titleDiv">
+    <h1 class="Title"><span>T</span>able</h1>
+</div>
+
+<div class="pantsTable">
+    <br /><br />
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>ClothType</th>
+            <th>Gender</th>
+            <th>Brand</th>
+            <th>isShort</th>
+            <th>isDrifit</th>
+            <th>Pic</th>
+            <th>Price</th>
+
+
+
+        </tr>
+        @foreach (var pants in Model)
+        {
+
+            <tr>
+                <td>@pants.Id</td>
+                <td>@pants.ClothType</td>
+                <td>@pants.Brand</td>
+                <td>@pants.Gender</td>
+                <td>@pants.isShort</td>
+                <td>@pants.isDrifit</td>
+                <td><img src="@pants.Pic" /></td>
+                <td>@pants.Price</td>
+
+
+            </tr>
+        }
+
+    </table>
+
+</div>

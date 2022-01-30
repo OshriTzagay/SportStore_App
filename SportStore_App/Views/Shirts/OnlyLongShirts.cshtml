@@ -1,0 +1,33 @@
+﻿<link rel="stylesheet" href="~/Content/ShirtsCSS.css" />
+
+<div class="shirtsBtns">
+
+    <button class="theBtns" onclick="location.href='@Url.Action("AllShirts", "Shirts")'">Sport Shirts</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("ShirtsTable", "Shirts")'">Shirts Table</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("OnlyLongShirts", "Shirts")'">Long Shirts&Tops</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("OnlyDrifit", "Shirts")'">Dri-fit Shirts</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("PriceSortedShirts", "Shirts")'">Low to High Prices</button>
+
+</div>
+
+<div title="titleDiv">
+    <h1 class="Title"><span>H</span>oodies <br /> <span>&</span> <br /><span>F</span>ooters</h1>
+</div>
+@{
+
+    <div class="cardsContainer">
+      
+        @foreach (var shirt in Model)
+        {
+        <div class="ShirtsCards">
+            <img class="ShirtsImgs" src="@shirt.Pic" />
+            <h1 id="clothTypeTitle">@shirt.ClothType</h1>
+            <h4 id="brandTitle">@shirt.Brand</h4>
+            <p> Price:@shirt.Price</p>
+
+        </div>
+        }
+    </div>
+
+}
+

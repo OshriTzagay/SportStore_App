@@ -1,0 +1,31 @@
+﻿<link rel="stylesheet" href="~/Content/PantsCSS.css" />
+
+<div class="pantsBtns">
+
+    <button class="theBtns" onclick="location.href='@Url.Action("AllPants", "Pants")'">Sport-Pants</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("PantsTable", "Pants")'">Pants Table</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("OnlyLongPants", "Pants")'">Long Pants</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("OnlyDrifitPants", "Pants")'">Dri-fit</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("PriceSortedPants", "Pants")'">Low to High Prices</button>
+
+</div>
+
+<div title="titleDiv">
+    <h1 class="Title"><span>L</span>ow <span>TO</span> <span>H</span>igh <br />Prices</h1>
+</div>
+@{
+    <div class="cardsContainer">
+
+        @foreach (var pants in Model)
+        {
+
+            <div class="PantsCards">
+                <img class="PantsImgs" src="@pants.Pic" />
+                <h1 id="clothTypeTitle">@pants.ClothType</h1>
+                <h4 id="brandTitle">@pants.Brand</h4>
+                <p>Price: @pants.Price</p>
+            </div>
+        }
+    </div>
+
+}

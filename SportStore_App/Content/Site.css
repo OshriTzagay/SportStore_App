@@ -1,0 +1,163 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+body {
+}
+
+.TheIcons {
+    display: flex;
+    flex-direction: row;
+}
+
+.icons {
+    margin-top: 115px;
+    position: relative;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: solid black 1px;
+    box-shadow: black 1px 1px 1px 1px;
+}
+
+.pageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+    color: #222;
+    overflow: hidden;
+}
+
+.welcomeTitle {
+    font-size: 60px;
+    font-family: 'Orbitron', sans-serif;
+    height: 15vh;
+    width: 100%;
+}
+
+.TheSpans {
+    color: silver;
+    border-bottom: double silver 2px;
+}
+
+video {
+    width: 100%;
+    height: 90vh;
+    box-shadow: silver 8px 8px 8px 8px;
+}
+
+.balls {
+    width: 80px;
+    height: 80px;
+    animation: ball;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    position: relative;
+    /*    margin-left:50%;*/
+}
+
+@keyframes ball {
+    0% {
+        left: 0%;
+        top: 0px;
+    }
+
+    100% {
+        left: 120%;
+        top: 0px;
+    }
+}
+
+.AboutUs {
+    margin-top: 100px;
+}
+
+.aboutUsTitle {
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    /*    font-family: 'Faster One', cursive;*/
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.aboutUsP {
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+}
+
+.spanMark {
+    background-color: silver;
+}
+
+.devTitle {
+    font-family: 'Cinzel Decorative', cursive;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 70px;
+    width: 50%;
+    height: 30%;
+}
+
+.devInfo {
+    margin-top: 70px;
+    border: 1px solid black;
+    width: 40vw;
+    height: 70vh;
+    background-color: silver;
+}
+
+#stuff {
+    opacity: 0.0;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    text-align: center;
+    margin-bottom: 50%;
+}
+
+#hover {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.devInfo:hover > #stuff {
+    opacity: 1.0;
+}
+
+.myInfo {
+    font-size: 20px;
+    font-family: 'Poiret One', cursive;
+}
+
+.contactMe {
+    background-color: whitesmoke;
+    color: black;
+}
+
+#pointer {
+    width: 35px;
+    height: 35px;
+    animation: MoveUpDown 1s linear infinite;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-top:70px;
+}
+@keyframes MoveUpDown {
+    0%, 100% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 50px;
+    }
+}

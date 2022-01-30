@@ -1,0 +1,30 @@
+﻿<link rel="stylesheet" href="~/Content/SportShoesCSS.css" />
+
+<div class="shoeBtns">
+    <button class="theBtns" onclick="location.href='@Url.Action("SportShoeCards", "SportShoes")'">Sport Shoes</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("ShoesTable", "SportShoes")'">Shoes Table</button>
+    <button class="theBtns" onclick="location.href='@Url.Action("ShoesInDiscount", "SportShoes")'">50% SALE Shoes</button>
+</div>
+@{
+    <div title="titleDiv">
+        <h1 class="Title"><span>S</span>hoes & <span>K</span>icks </h1>
+    </div>
+    <div class="bg-div">
+        <img class="the-bg" src="https://i.pinimg.com/originals/55/50/c0/5550c0b29321f722f778a4cdc699582a.png" />
+
+    </div>
+    <div class="cardsContainer">
+
+        @foreach (var shoe in Model)
+        {
+            <div class="shoesCards">
+                <img class="sportShoesImgs" src="@shoe.Pic" />
+                <h1 id="companyTitle">@shoe.Company</h1>
+                <h4 id="brandTitle">@shoe.Brand</h4>
+                <h5 id="priceTitle"> Price:<b> @shoe.Price</b></h5>
+
+            </div>
+        }
+    </div>
+
+}

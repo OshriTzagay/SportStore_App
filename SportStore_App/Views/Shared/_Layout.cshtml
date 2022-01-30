@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/534c2fa5ea.js" crossorigin="anonymous"></script>
+    <style>
+        .navbar-header {
+            height: 100px;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .navbar-collapse collapse {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .nav navbar-nav {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        li {
+            font-size: 20px;
+            padding: 2px;
+            margin-left: 100px;
+            transition: 2s;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+            li:hover {
+                font-size: 22px;
+                border-bottom: 1px solid whitesmoke;
+            }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Sport-Store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Shoes", "SportShoeCards", "SportShoes")</li>
+                    <li>@Html.ActionLink("Shirts", "AllShirts", "Shirts")</li>
+                    <li>@Html.ActionLink("Pants", "AllPants", "Pants")</li>
+                    <li>@Html.ActionLink("Sport-Equipments", "AllEquipments", "SportEquipment")</li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <h1 style="text-align: center; font-size: 18px; font-family: 'Orbitron', sans-serif">
+                All Rights Reserved to Oshri-el Tzagay ©️<br><a href="https://github.com/OshriTzagay"> <i class="fab fa-github contactIcons fa-4x"></i></a>
+                <a href="https://www.facebook.com/OshriTzagay/"> <i class="fab fa-facebook fa-4x"></i></a>
+                <a href="https://www.linkedin.com/in/oshri-el-tzagay-873482226/"> <i class="fab fa-linkedin fa-4x"></i></a>
+
+            </h1>
+
+
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

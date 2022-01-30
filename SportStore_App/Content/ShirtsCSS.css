@@ -1,0 +1,169 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+body {
+}
+
+.shirtsBtns {
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 18vh;
+    width: 65%;
+    margin-left: 17%;
+}
+
+.theBtns {
+    font-size:17px;
+    background-color: transparent;
+    color: silver;
+    height: 60px;
+    width: 115px;
+    color: black;
+    border-radius: 5px;
+    transition: 0.4s linear;
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+}
+
+    .theBtns:hover {
+        background-color: black;
+        color: silver;
+        margin-left: 5px;
+    }
+
+.cardsContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 150px;
+}
+
+.ShirtsCards {
+    width: 355px;
+    height: 440px;
+    text-align: center;
+    margin-bottom: 220px;
+    box-shadow: gray 8px 8px 8px 8px;
+    font-family: 'Orbitron', sans-serif;
+    transition: 0.5s;
+}
+.ShirtsCards:hover{
+    width:370px;
+    height:450px;
+}
+
+.ShirtsImgs {
+    transition: 2s;
+    width: 350px;
+    height: 380px;
+    cursor:pointer;
+}
+
+
+.ShirtsCards:hover {
+    box-shadow: silver 15px 15px 15px 15px;
+   
+}
+
+.titleDiv {
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    padding: 15px;
+}
+
+.Title {
+    height: 15vh;
+    color: darkgray;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Monoton', cursive;
+    letter-spacing: 10px;
+    border-left: double darkgray 1px;
+    border-right: double darkgray 1px;
+    transition: 2s;
+}
+
+ 
+
+
+span {
+    color: black;
+}
+
+.slide {
+    width: 68vw;
+    height: 66vh;
+    display: flex;
+    text-align: center;
+    overflow: hidden;
+    margin-right: 400%;
+    margin-left: 5%;
+    box-shadow: silver 2px 2px 2px 2px;
+}
+
+    .slide .slidePic {
+        background-attachment: fixed;
+        width: auto;
+        height: 100%;
+        flex-shrink: 0;
+        animation: sideToSide 20s alternate infinite;
+    }
+
+        .slide .slidePic img {
+            width: 90%;
+            height: 100%;
+            opacity: 0.7;
+        }
+
+@keyframes sideToSide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    25% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(-200%);
+    }
+
+    75% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(-450%);
+    }
+}
+
+
+/**/
+
+/*TABLE CSS */
+
+body {
+}
+
+.shirtsTable tr, td {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+    table th {
+        text-align: center;
+    }
+
+.shirtsTable img {
+    width: 150px;
+    height: 150px;
+}
+
