@@ -11,10 +11,9 @@ namespace SportStore_App.Controllers.api
 {
     public class TeamsController : ApiController
     {
-        // GET: api/Teams
         public static string connString = "Data Source=LAPTOP-P4F5KURV;Initial Catalog=SportStoreDB;Integrated Security=True;Pooling=False";
         public SportStoreDContextDataContext MyDataContext = new SportStoreDContextDataContext(connString);
-        // GET: api/Teams
+        // GET: api/Teams//
         public IHttpActionResult Get()
 
         {
